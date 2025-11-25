@@ -1,0 +1,50 @@
+{
+  "server": {
+    "tcpEnabled": false,
+    "tcpPortRange": {
+      "start": 8000,
+      "end": 8100
+    },
+    "udpEnabled": false,
+    "udpPortRange": {
+      "start": 9000,
+      "end": 9100
+    }
+  },
+  "client": {
+    "tcpEnabled": false,
+    "tcpThreadCount": 100,
+    "tcpPortRange": {
+      "start": 8000,
+      "end": 8100
+    },
+    "udpEnabled": false,
+    "udpThreadCount": 50,
+    "udpPortRange": {
+      "start": 9000,
+      "end": 9100
+    },
+    "serverHost": "192.168.0.1"
+  },
+  "networkTest": {
+    "enabled": true,
+    "dataSize": 1024,
+    "iterations": 1000,
+    "delayBetweenIterations": 100,
+    "delayBetweenConnections": 100
+  },
+  "fileTest": {
+    "enabled": true,
+    "testFolderPath": "./test_stress",
+    "threadCount": 100,
+    "iterations": 500,
+    "minFileSize": 1024,
+    "maxFileSize": 1048576,
+    "maxSubDirDepth": 3,
+    "delayBetweenOperations": 10,
+    "deleteProbability": 0.1,
+    "mkdirProbability": 0.1,
+    "rmdirProbability": 0.05
+  }
+}
+
